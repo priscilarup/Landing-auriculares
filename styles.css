@@ -31,7 +31,7 @@ canvas#particles-bg {
 }
 .carousel {
     position: relative;
-    width: 600px;
+    width: 400px;
     max-width: 80%;
     margin: 25px auto 24px auto;
     border-radius: 24px;
@@ -274,6 +274,11 @@ canvas#particles-bg {
     color: #fff;
     text-shadow: 0 0 8px #D4AF37;
 }
+.price-row {
+    background: linear-gradient(90deg, #C8102E 0%, #070606 100%) !important;
+    color: #D4AF37 !important;
+    font-weight: bold !important;
+}
 .guarantee {
     background: #070606cc;
     border-radius: 14px;
@@ -295,15 +300,45 @@ canvas#particles-bg {
 }
 .buy-form {
     margin: 24px auto 50px auto;
-    max-width: 400px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     background: #070606cc;
     border-radius: 16px;
-    padding: 18px 16px;
+    padding: 24px 16px;
     box-shadow: 0 0 16px #C8102E55;
     border: 2px solid #C8102E;
+}
+.form-title {
+    color: #D4AF37;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    text-shadow: 0 0 8px #C8102E;
+    margin-top: 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #C8102E;
+    padding-bottom: 8px;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: opacity 0.3s ease;
+}
+.form-section.hidden {
+    display: none;
+}
+.form-section.active {
+    display: flex;
+}
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+.form-buttons button {
+    flex: 1;
 }
 .buy-label {
     color: #D4AF37;
@@ -339,6 +374,32 @@ canvas#particles-bg {
     border-radius: 6px;
     box-shadow: 0 0 8px #C8102E55;
     padding: 2px;
+}
+.card-details {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+.card-details > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.address-fields {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+.address-fields > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.card-input {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
 }
 
 .footer {

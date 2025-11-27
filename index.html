@@ -14,9 +14,9 @@
         <div class="hero-content">
             <div class="carousel">
                 <div class="carousel-inner">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_717712-MLA92011842775_092025-O.webp" alt="Auriculares Gamer RGB" class="carousel-item" />
-                    <img src="https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Auriculares Gamer RGB Rojo" class="carousel-item" />
-                    <img src="https://images.pexels.com/photos/3808519/pexels-photo-3808519.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Auriculares Gamer RGB Azul" class="carousel-item" />
+                    <img src="auriculares1.png" alt="Auriculares Gamer RGB" class="carousel-item" />
+                    <img src="auriculares2.png" alt="Auriculares Gamer RGB Rojo" class="carousel-item" />
+                    <img src="auriculares3.png" alt="Auriculares Gamer RGB Azul" class="carousel-item" />
                 </div>
                 <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
                 <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
@@ -78,7 +78,8 @@
     </section>
     <section class="offer">
         <h2 class="section-title gold">¡Oferta limitada!</h2>
-        <p>Descuento especial solo por hoy</p>
+        <p>Descuento especial solo por hoy</p> <br>20% de descuento en tu compra con el código: <strong>GAMER20</strong>
+        <br><br>    
         <div class="timer" id="timer"></div>
         <button class="cta-button neon" id="cta-offer">Aprovecha el Descuento</button>
     </section>
@@ -89,17 +90,23 @@
                 <tr>
                     <th></th>
                     <th>Auriculares Gamer</th>
-                    <th>Auriculares Comunes</th>
+                    <th>Razer Kraken</th>
+                    <th>HyperX Cloud Stinger 2</th>
+                    <th>Corsair HS50</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Sonido 3D</td>
                     <td>✔️</td>
-                    <td>❌</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
                 </tr>
                 <tr>
                     <td>Batería 30h</td>
+                    <td>✔️</td>
+                    <td>❌</td>
                     <td>✔️</td>
                     <td>❌</td>
                 </tr>
@@ -107,16 +114,29 @@
                     <td>Bluetooth 5.0</td>
                     <td>✔️</td>
                     <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
                 </tr>
                 <tr>
                     <td>Luces LED RGB</td>
                     <td>✔️</td>
+                    <td>✔️</td>
                     <td>❌</td>
+                    <td>✔️</td>
                 </tr>
                 <tr>
                     <td>Diseño gamer</td>
                     <td>✔️</td>
-                    <td>❌</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td class="price-row"><strong>Precio</strong></td>
+                    <td class="price-row"><strong>$89.99</strong></td>
+                    <td class="price-row"><strong>$129.99</strong></td>
+                    <td class="price-row"><strong>$109.99</strong></td>
+                    <td class="price-row"><strong>$119.99</strong></td>
                 </tr>
             </tbody>
         </table>
@@ -129,20 +149,75 @@
     
     <section>
         <form class="buy-form">
-                <label for="nombre" class="buy-label">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre gamer" class="buy-input">
-                <label for="direccion" class="buy-label">Dirección de envío:</label>
-                <input type="text" id="direccion" name="direccion" required placeholder="Dirección completa" class="buy-input">
-                <label for="telefono" class="buy-label">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required placeholder="Tu número" class="buy-input">
-                <div class="payment-methods">
-                    <span>Métodos de pago:</span>
-                    <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Visa" title="Visa" width="36">
-                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Mastercard" title="Mastercard" width="36">
-                    <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" alt="PayPal" title="PayPal" width="36">
-                    <img src="https://images.seeklogo.com/logo-png/34/1/mercado-pago-logo-png_seeklogo-342347.png" alt="MercadoPago" title="MercadoPago" width="36">
+                <div id="contact-section" class="form-section active">
+                    <h3 class="form-title">Datos Personales</h3>
+                    <label for="nombre" class="buy-label">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre gamer" class="buy-input">
+                    <label for="email-form" class="buy-label">Correo electrónico:</label>
+                    <input type="email" id="email-form" name="email-form" required placeholder="Tu correo" class="buy-input">
+                    
+                    <label for="direccion" class="buy-label">Dirección de envío:</label>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Calle y número" class="buy-input">
+                    
+                    <div class="address-fields">
+                        <div>
+                            <label for="codigo-postal" class="buy-label">Código Postal:</label>
+                            <input type="text" id="codigo-postal" name="codigo-postal" required placeholder="CP" class="buy-input">
+                        </div>
+                        <div>
+                            <label for="provincia" class="buy-label">Provincia/Estado:</label>
+                            <input type="text" id="provincia" name="provincia" required placeholder="Provincia" class="buy-input">
+                        </div>
+                    </div>
+                    
+                    <div class="address-fields">
+                        <div>
+                            <label for="ciudad" class="buy-label">Ciudad:</label>
+                            <input type="text" id="ciudad" name="ciudad" required placeholder="Ciudad" class="buy-input">
+                        </div>
+                        <div>
+                            <label for="pais" class="buy-label">País:</label>
+                            <input type="text" id="pais" name="pais" required placeholder="País" class="buy-input">
+                        </div>
+                    </div>
+                    
+                    <label for="telefono" class="buy-label">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Tu número" class="buy-input">
+                    <button type="button" class="cta-button neon" onclick="showPaymentSection()">Continuar al Pago</button>
                 </div>
-                <button type="submit" class="cta-button pulse">Comprar Ahora</button>
+                
+                <div id="payment-section" class="form-section hidden">
+                    <h3 class="form-title">Datos de Pago</h3>
+                    <label for="card-name" class="buy-label">Titular de la tarjeta:</label>
+                    <input type="text" id="card-name" name="card-name" required placeholder="Nombre en la tarjeta" class="buy-input">
+                    
+                    <label for="card-number" class="buy-label">Número de tarjeta:</label>
+                    <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456" maxlength="19" class="buy-input card-input">
+                    
+                    <div class="card-details">
+                        <div>
+                            <label for="card-expiry" class="buy-label">Fecha de vencimiento:</label>
+                            <input type="text" id="card-expiry" name="card-expiry" required placeholder="MM/YY" maxlength="5" class="buy-input">
+                        </div>
+                        <div>
+                            <label for="card-cvv" class="buy-label">CVV:</label>
+                            <input type="text" id="card-cvv" name="card-cvv" required placeholder="123" maxlength="4" class="buy-input">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <span>Métodos de pago aceptados:</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Visa" title="Visa" width="36">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Mastercard" title="Mastercard" width="36">
+                        <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" alt="PayPal" title="PayPal" width="36">
+                        <img src="https://images.seeklogo.com/logo-png/34/1/mercado-pago-logo-png_seeklogo-342347.png" alt="MercadoPago" title="MercadoPago" width="36">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="cta-button" onclick="backToContact()">Atrás</button>
+                        <button type="submit" class="cta-button pulse">Comprar Ahora - $89.99</button>
+                    </div>
+                </div>
             </form>
     </section>
 

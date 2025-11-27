@@ -118,11 +118,57 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Animación de scroll suave para CTA
     document.getElementById('cta-main').onclick = () => {
-        document.querySelector('.offer').scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('.buy-form').scrollIntoView({ behavior: 'smooth' });
     };
     document.getElementById('cta-offer').onclick = () => {
-        document.querySelector('.subscribe-form').scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('.buy-form').scrollIntoView({ behavior: 'smooth' });
     };
+
+// Formulario de compra con flujo de secciones
+function showPaymentSection() {
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email-form').value;
+    const direccion = document.getElementById('direccion').value;
+    const codigoPostal = document.getElementById('codigo-postal').value;
+    const provincia = document.getElementById('provincia').value;
+    const ciudad = document.getElementById('ciudad').value;
+    const pais = document.getElementById('pais').value;
+    const telefono = document.getElementById('telefono').value;
+    
+    if (nombre && email && direccion && codigoPostal && provincia && ciudad && pais && telefono) {
+        document.getElementById('contact-section').classList.remove('active');
+        document.getElementById('contact-section').classList.add('hidden');
+        document.getElementById('payment-section').classList.remove('hidden');
+        document.getElementById('payment-section').classList.add('active');
+    } else {
+        alert('Por favor completa todos los campos de contacto y dirección');
+    }
+}
+
+function backToContact() {
+    document.getElementById('payment-section').classList.remove('active');
+    document.getElementById('payment-section').classList.add('hidden');
+    document.getElementById('contact-section').classList.remove('hidden');
+    document.getElementById('contact-section').classList.add('active');
+}
+
+// Formulario de compra - envío
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.buy-form').onsubmit = function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email-form').value;
+        const cardNumber = document.getElementById('card-number').value;
+        
+        if (nombre && email && cardNumber) {
+            const lastFourDigits = cardNumber.slice(-4);
+            alert('¡Gracias por tu compra ' + nombre + '!\n\nPago procesado exitosamente.\nTarjeta terminada en: ' + lastFourDigits + '\n\nTe enviaremos los detalles del envío a: ' + email);
+            this.reset();
+            showPaymentSection();
+            backToContact();
+        }
+    };
+});
 
     // Formulario de suscripción (solo frontend)
     document.querySelector('.subscribe-form').onsubmit = function(e) {
