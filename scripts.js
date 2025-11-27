@@ -1,3 +1,37 @@
+// Carrusel
+let currentCarouselIndex = 0;
+function changeSlide(n) {
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    currentCarouselIndex += n;
+    if (currentCarouselIndex >= items.length) currentCarouselIndex = 0;
+    if (currentCarouselIndex < 0) currentCarouselIndex = items.length - 1;
+    items.forEach(item => item.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    items[currentCarouselIndex].classList.add('active');
+    dots[currentCarouselIndex].classList.add('active');
+}
+function currentSlide(n) {
+    currentCarouselIndex = n;
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    items.forEach(item => item.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    items[currentCarouselIndex].classList.add('active');
+    dots[currentCarouselIndex].classList.add('active');
+}
+// Auto-advance carousel
+setInterval(() => changeSlide(1), 5000);
+// Inicializar primer slide
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    if (items.length > 0) {
+        items[0].classList.add('active');
+        dots[0].classList.add('active');
+    }
+});
+
 // Partículas de fondo estilo neón
 const canvas = document.getElementById('particles-bg');
 const ctx = canvas.getContext('2d');

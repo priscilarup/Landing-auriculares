@@ -12,8 +12,22 @@
     <canvas id="particles-bg"></canvas>
     <section class="hero">
         <div class="hero-content">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_717712-MLA92011842775_092025-O.webp" alt="Auriculares Gamer RGB" class="hero-img" />
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_717712-MLA92011842775_092025-O.webp" alt="Auriculares Gamer RGB" class="carousel-item" />
+                    <img src="https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Auriculares Gamer RGB Rojo" class="carousel-item" />
+                    <img src="https://images.pexels.com/photos/3808519/pexels-photo-3808519.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Auriculares Gamer RGB Azul" class="carousel-item" />
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
             <h1 class="hero-title">Poder en tu juego,<br><span class="gold">estilo en tu mundo</span></h1>
+            <button class="cta-button neon" id="cta-main">Compra Ahora</button>
         </div>
     </section>
     <section class="benefits">
