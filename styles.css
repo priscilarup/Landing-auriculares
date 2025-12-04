@@ -244,6 +244,72 @@ canvas#particles-bg {
 .offer .gold {
     color: #D4AF37;
 }
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.price-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #D4AF37;
+    min-width: 120px;
+    transition: transform 0.3s;
+}
+.price-box.highlighted {
+    background: linear-gradient(135deg, #D4AF37 0%, #C8102E 100%);
+    border: 2px solid #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 24px #D4AF37;
+    padding: 20px 24px;
+    min-width: 160px;
+}
+.label-price {
+    color: #D4AF37;
+    font-size: 0.8em;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+.price-box.highlighted .label-price {
+    color: #070606;
+}
+.original-price {
+    font-size: 1.3em;
+    margin: 0;
+    text-decoration: line-through;
+    color: #D4AF37;
+}
+.discounted-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+    color: #070606;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 12px #D4AF37;
+}
+.price-box.highlighted .discounted-price {
+    font-size: 1.9em;
+}
+.discount-badge {
+    background: #070606;
+    color: #D4AF37;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.7em;
+    margin-top: 4px;
+    display: inline-block;
+    font-weight: bold;
+}
+.price-separator {
+    font-size: 2em;
+    color: #D4AF37;
+    text-shadow: 0 0 12px #C8102E;
+}
 .timer {
     font-size: 2rem;
     color: #D4AF37;
